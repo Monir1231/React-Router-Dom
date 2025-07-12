@@ -7,17 +7,21 @@ import { Home } from './Component/Router/Home';
 import About from './Component/Router/About';
 import Blog from './Component/Router/Blog';
 import Contact from './Component/Router/Contact';
+import Error from './Component/Router-error/Error';
 function App() {
 
   return (
     <>
    <BrowserRouter>
-   <Nabar/>
+  
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/About' element={<About/>}/>
-       <Route path='/Blog' element={<Blog/>}/>
+      <Route path='' element={<Nabar/>}>
+        <Route path='/' element={<Home/>}/>
+         <Route path='/About' element={<About/>}/>
+        <Route path='/Blog' element={<Blog/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='*' element={<Error/>}/>
+      </Route>
     </Routes>
    </BrowserRouter>
 

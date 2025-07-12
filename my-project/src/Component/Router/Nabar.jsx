@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink,Outlet} from 'react-router-dom'
 
 function Nabar() {
   return (
@@ -11,13 +11,14 @@ function Nabar() {
             </div>
             <div >
                 <ul className='flex items-center gap-6 text-xl' >
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/About">About</Link></li>
-                <li><Link to = "/Blog">Blog</Link></li>
-                <li><Link to = "">Contact</Link></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/About">About</NavLink></li>
+                <li><NavLink to = "/Blog">Blog</NavLink></li>
+                <li><NavLink to = "/Contact">Contact</NavLink></li>
             </ul>
             </div>
         </div>
+        <Outlet/>
     </>
   )
 }
